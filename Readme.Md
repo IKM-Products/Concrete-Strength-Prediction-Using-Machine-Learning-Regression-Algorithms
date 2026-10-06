@@ -4,7 +4,7 @@
 
 ## 🔬 Research Focus
 
-The study investigates the relationship between concrete composition, curing age, and compressive strength using the following input parameters:
+The research focuses on the relationship between concrete composition, curing age, and compressive strength using the following input parameters:
 
 * 🧱 Cement
 * 🏭 Blast Furnace Slag
@@ -14,10 +14,6 @@ The study investigates the relationship between concrete composition, curing age
 * 🪨 Coarse Aggregate
 * 🏖️ Fine Aggregate
 * 📅 Age
-
-**Target Variable:**
-
-* 💪 Concrete Compressive Strength
 
 ## 📊 Dataset
 
