@@ -97,28 +97,8 @@ The research can further evaluate model performance through:
 * **Data Processing:** Pandas, NumPy
 * **Machine Learning:** Scikit-learn, XGBoost
 * **Data Visualization:** Matplotlib, Seaborn
-* **Development Environment:** Google Colab / Jupyter Notebook
+* **Code Editor:** Google Colab
 * **Version Control:** Git & GitHub
-
-## 📂 Repository Structure
-
-```text
-Concrete-Strength-Prediction-Using-Machine-Learning-Regression-Algorithms/
-│
-├── 📁 dataset/
-│   └── Concrete Compressive Strength.csv
-│
-├── 📁 notebooks/
-│   └── concrete_strength_prediction.ipynb
-│
-├── 📁 results/
-│   ├── 📊 model_comparison
-│   ├── 📈 evaluation_metrics
-│   └── 📉 visualizations
-│
-├── 📄 README.md
-└── 📄 requirements.txt
-```
 
 ## 🎯 Research Objective
 
