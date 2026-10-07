@@ -17,23 +17,31 @@ The research focuses on the relationship between concrete composition, curing ag
 
 ## 📊 Dataset
 
-The research uses a publicly available **Concrete Compressive Strength** dataset containing concrete mixture proportions, age, and corresponding compressive strength measurements.
+The research uses a publicly available concrete compressive strength dataset containing:
 
-The dataset is analyzed through exploratory data analysis, data quality checks, feature relationship analysis, and preprocessing before model training.
+* **1,030 samples**
+* **8 input features**
+* **1 target variable** — concrete compressive strength
 
 ## 🔄 Research Workflow
 
-1. 📥 **Dataset Collection** - Load the concrete compressive strength dataset.
-2. 🔍 **Data Exploration** - Examine dataset structure, data types, descriptive statistics, and feature distributions.
-3. 🧹 **Data Preprocessing** - Check missing values, duplicate records, and data quality.
-4. 📦 **Outlier Analysis** - Identify potential outliers using the Interquartile Range (IQR) method and boxplots.
-5. 📈 **Correlation Analysis** - Analyze relationships between input features and concrete compressive strength.
-6. 🎯 **Feature & Target Separation** - Separate concrete mixture parameters and age from the target strength.
-7. ✂️ **Data Splitting** - Divide the dataset into training and testing sets.
-8. ⚖️ **Feature Scaling** - Apply StandardScaler to Linear Regression where required.
-9. 🤖 **Model Training** - Train Linear Regression, Decision Tree, Random Forest, Gradient Boosting, and XGBoost models.
-10. 📊 **Model Evaluation** - Evaluate and compare model performance using regression metrics.
-11. 🏆 **Comparative Analysis** - Identify the most effective regression algorithm based on experimental results.
+1. 📥 **Dataset Collection** — Load the concrete compressive strength dataset.
+2. 🔍 **Data Exploration** — Examine dataset structure, data types, descriptive statistics, and target distribution.
+3. 🧹 **Data Preprocessing** — Check missing values, infinite values, zero values, duplicate records, and overall data quality.
+4. 📦 **Outlier Analysis** — Detect potential outliers using the Interquartile Range (IQR) method and boxplots.
+5. 📈 **Correlation Analysis** — Analyze relationships among input features and concrete compressive strength.
+6. 🎯 **Feature & Target Separation** — Separate concrete mixture parameters and age from the target strength.
+7. ✂️ **Train-Test Split** — Divide the dataset into training and testing sets using an 80:20 split.
+8. ⚖️ **Feature Scaling** — Apply StandardScaler to Linear Regression while keeping tree-based models unscaled.
+9. 🤖 **Model Training** — Train Linear Regression, Decision Tree, Random Forest, Gradient Boosting, and XGBoost regression models.
+10. 📊 **Model Evaluation** — Evaluate models using MAE, RMSE, and R² metrics.
+11. 🔁 **Cross-Validation** — Perform 5-fold cross-validation to assess model consistency and robustness.
+12. 📉 **Visual Analysis** — Analyze target distribution, cement-strength relationship, actual vs. predicted values, residuals, and feature importance.
+13. 🏆 **Model Comparison** — Compare the performance of all regression models and identify the best-performing algorithm.
+14. ⚙️ **Hyperparameter Tuning** — Optimize the XGBoost model using GridSearchCV with 5-fold cross-validation.
+15. 🚀 **Tuned Model Evaluation** — Evaluate the optimized XGBoost model on the unseen test dataset.
+16. 🥇 **Final Model Selection** — Select the tuned XGBoost model as the final model based on its superior predictive performance.
+17. 💾 **Model Saving** — Save the trained regression models, tuned XGBoost model, and required scaler for future use.
 
 ## 🤖 Machine Learning Models
 
@@ -62,41 +70,34 @@ An optimized gradient boosting algorithm designed for efficient and high-perform
 The models are evaluated using standard regression metrics:
 
 * **Mean Absolute Error (MAE)**
-* **Mean Squared Error (MSE)**
 * **Root Mean Squared Error (RMSE)**
 * **R² Score**
-* **Mean Absolute Percentage Error (MAPE)**
+* **5-Fold Cross-Validation Score**
 
-## 🏆 Model Comparison
+## 🏆 Comparative Results
 
-The performance of all five regression algorithms is compared based on their prediction errors and coefficient of determination.
+| Model             |       MAE |      RMSE |         R² |
+| ----------------- | --------: | --------: | ---------: |
+| Linear Regression |     8.896 |    11.192 |     0.5801 |
+| Decision Tree     |     3.961 |     6.317 |     0.8662 |
+| Random Forest     |     3.489 |     5.153 |     0.9110 |
+| Gradient Boosting |     4.099 |     5.520 |     0.8979 |
+| XGBoost           |     3.234 |     4.716 |     0.9254 |
+| **Tuned XGBoost** | **2.648** | **4.099** | **0.9437** |
 
-| Model             | MAE | MSE | RMSE | R² |
-| ----------------- | --: | --: | ---: | -: |
-| Linear Regression |   — |   — |    — |  — |
-| Decision Tree     |   — |   — |    — |  — |
-| Random Forest     |   — |   — |    — |  — |
-| Gradient Boosting |   — |   — |    — |  — |
-| XGBoost           |   — |   — |    — |  — |
+## 🔧 Hyperparameter Optimization
 
-> **Note:** Replace the values above with the final experimental results from your research.
+The research also investigates model optimization using:
 
-## 🔧 Model Optimization
-
-The research can further evaluate model performance through:
-
-* Hyperparameter tuning
-* Cross-validation
 * Grid Search
-* Random Search
-* Comparative performance analysis
+* 5-Fold Cross-Validation
 
 ## 🛠️ Technologies & Tools
 
 * **Programming Language:** Python
 * **Data Processing:** Pandas, NumPy
 * **Machine Learning:** Scikit-learn, XGBoost
-* **Data Visualization:** Matplotlib, Seaborn
+* **Visualization:** Matplotlib, Seaborn
 * **Code Editor:** Google Colab
 * **Version Control:** Git & GitHub
 
@@ -109,8 +110,6 @@ The primary objective of this research is to **comparatively analyze machine lea
 * 🧱 Evaluation using larger and more diverse concrete datasets
 * 🔬 Incorporation of additional concrete properties and material characteristics
 * 🤖 Investigation of advanced machine learning and deep learning models
-* ⚙️ Automated hyperparameter optimization
-* 📊 Feature selection and importance analysis
 * 🧠 Explainable AI for understanding concrete strength predictions
 * 🌍 Evaluation using real-world experimental concrete data
 
